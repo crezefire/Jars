@@ -1,25 +1,25 @@
-project(compile-options-public
+project(jars-compile-options-public
     VERSION 0.0
     LANGUAGES CXX
 )
 
-add_library(compile-options-public
+add_library(jars-compile-options-public
     INTERFACE
 )
 
 add_library(jars::compile-options-public
     ALIAS
-        compile-options-public
+        jars-compile-options-public
 )
 
 if (MSVC)
-    target_compile_options(compile-options-public
+    target_compile_options(jars-compile-options-public
         INTERFACE
             /Oi         # Enable intrinsic functions
             /std:c++17  # Enable C++ 17 features
     )
 elseif (UNIX)
-    target_compile_options(compile-options-public
+    target_compile_options(jars-compile-options-public
         INTERFACE
             -std=c++17
     )
@@ -27,7 +27,7 @@ endif()
 
 install(
     TARGETS
-        compile-options-public
+        jars-compile-options-public
     EXPORT
         CompileOptionsPublicTargets
 )

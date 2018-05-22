@@ -1,18 +1,18 @@
-project(tests
+project(jars-tests
     VERSION 0.0
     LANGUAGES CXX
 )
 
-add_executable(tests
+add_executable(jars-tests
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
-add_executable(jars::tests
+add_executable(jars::jars-tests
     ALIAS
-        tests
+        jars-tests
 )
 
-target_link_libraries(tests
+target_link_libraries(jars-tests
     INTERFACE
         jars::compile-options-private
     PRIVATE
