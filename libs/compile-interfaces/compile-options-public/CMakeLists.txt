@@ -29,16 +29,16 @@ install(
     TARGETS
         jars-compile-options-public
     EXPORT
-        CompileOptionsPublicTargets
+        JarsCompileOptionsPublicTargets
 )
 
 install(
     EXPORT
-        CompileOptionsPublicTargets
+        JarsCompileOptionsPublicTargets
     FILE
-        CompileOptionsPublicTargets.cmake
+        JarsCompileOptionsPublicTargets.cmake
     NAMESPACE
         jars::
     DESTINATION
-        lib/cmake/CompileOptionsPublicTargets
+        lib/cmake/JarsCompileOptionsPublicTargets
 )

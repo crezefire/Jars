@@ -55,16 +55,16 @@ install(
     TARGETS
         jars-compile-options-private
     EXPORT
-        CompileOptionsPrivateTargets
+        JarsCompileOptionsPrivateTargets
 )
 
 install(
     EXPORT
-        CompileOptionsPrivateTargets
+        JarsCompileOptionsPrivateTargets
     FILE
-        CompileOptionsPrivateTargets.cmake
+        JarsCompileOptionsPrivateTargets.cmake
     NAMESPACE
         jars::
     DESTINATION
-        lib/cmake/CompileOptionsPrivateTargets
+        lib/cmake/JarsCompileOptionsPrivateTargets
 )
